@@ -1,0 +1,1039 @@
+/* ===== MODO ESCURO COMPLETO SEAPASS ===== */
+
+/* FUNDO GERAL PARA TODAS AS PÁGINAS */
+body.dark-mode {
+    background: #0f172a !important;
+    color: #e2e8f0 !important;
+    font-family: 'Segoe UI', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+}
+
+/* HEADER - TODAS AS PÁGINAS */
+body.dark-mode .topbar {
+    background: rgba(30, 41, 59, 0.95) !important;
+    backdrop-filter: blur(10px) !important;
+    border-bottom: 1px solid #334155 !important;
+}
+
+body.dark-mode .header-content {
+    background: transparent !important;
+}
+
+body.dark-mode .logo-text {
+    background: linear-gradient(135deg, #60a5fa, #93c5fd) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+}
+
+body.dark-mode .back-button {
+    background: #1e293b !important;
+    border: 1px solid #475569 !important;
+    color: #60a5fa !important;
+}
+
+body.dark-mode .back-button:hover {
+    background: #334155 !important;
+    transform: translateX(-2px) !important;
+}
+
+/* MENU HAMBURGUER - TODAS AS PÁGINAS */
+body.dark-mode .menu {
+    background: #1e293b !important;
+    border: 1px solid #475569 !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4) !important;
+}
+
+body.dark-mode .menu-item {
+    color: #cbd5e1 !important;
+    background: #1e293b !important;
+}
+
+body.dark-mode .menu-item:hover {
+    background: #334155 !important;
+    color: #60a5fa !important;
+    transform: translateX(5px) !important;
+}
+
+body.dark-mode .hamburguer-btn span {
+    background: #cbd5e1 !important;
+}
+
+/* ===== TELA INICIAL ===== */
+body.dark-mode .hero-section {
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #334155 100%) !important;
+}
+
+body.dark-mode .hero-title {
+    background: linear-gradient(135deg, #f1f5f9, #cbd5e1) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+}
+
+body.dark-mode .hero-subtitle {
+    color: #94a3b8 !important;
+}
+
+/* BARRA DE PESQUISA */
+body.dark-mode .search-box {
+    background: #334155 !important;
+    border: 1px solid #475569 !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3) !important;
+}
+
+body.dark-mode .search-input {
+    background: transparent !important;
+    color: #f1f5f9 !important;
+}
+
+body.dark-mode .search-input::placeholder {
+    color: #94a3b8 !important;
+}
+
+body.dark-mode .search-icon {
+    color: #94a3b8 !important;
+}
+
+body.dark-mode .search-btn {
+    background: linear-gradient(135deg, #3b82f6, #2563eb) !important;
+    color: white !important;
+}
+
+body.dark-mode .search-btn:hover {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8) !important;
+}
+
+/* RESULTADOS DA BUSCA */
+body.dark-mode .search-results {
+    background: #1e293b !important;
+    border: 1px solid #475569 !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4) !important;
+}
+
+body.dark-mode .results-header {
+    border-bottom: 1px solid #475569 !important;
+}
+
+body.dark-mode .results-header h3 {
+    color: #f1f5f9 !important;
+}
+
+body.dark-mode .close-results {
+    color: #94a3b8 !important;
+}
+
+body.dark-mode .close-results:hover {
+    background: #334155 !important;
+    color: #f1f5f9 !important;
+}
+
+body.dark-mode .result-item {
+    color: #cbd5e1 !important;
+}
+
+body.dark-mode .result-item:hover {
+    background: #334155 !important;
+}
+
+body.dark-mode .result-info h4 {
+    color: #f1f5f9 !important;
+}
+
+body.dark-mode .result-info p {
+    color: #94a3b8 !important;
+}
+
+/* CONTEÚDO PRINCIPAL - TELA INICIAL */
+body.dark-mode .content-container {
+    background: transparent !important;
+}
+
+body.dark-mode .section-title {
+    color: #f1f5f9 !important;
+}
+
+body.dark-mode .see-all {
+    color: #60a5fa !important;
+}
+
+body.dark-mode .see-all:hover {
+    color: #93c5fd !important;
+}
+
+/* CARDS DE HOTÉIS - TELA INICIAL */
+body.dark-mode .hotel-card {
+    background: #1e293b !important;
+    border: 1px solid #475569 !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+body.dark-mode .hotel-card:hover {
+    transform: translateY(-8px) !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4) !important;
+    border-color: #3b82f6 !important;
+}
+
+body.dark-mode .card-overlay {
+    background: linear-gradient(to bottom, transparent, rgba(15, 23, 42, 0.8)) !important;
+}
+
+body.dark-mode .hotel-name {
+    color: #f1f5f9 !important;
+}
+
+body.dark-mode .hotel-location {
+    color: #94a3b8 !important;
+}
+
+body.dark-mode .amenity {
+    background: #334155 !important;
+    color: #cbd5e1 !important;
+    border: 1px solid #475569 !important;
+}
+
+body.dark-mode .featured-badge {
+    background: linear-gradient(135deg, #f59e0b, #d97706) !important;
+    color: white !important;
+}
+
+body.dark-mode .featured-badge.luxo {
+    background: linear-gradient(135deg, #8b5cf6, #7c3aed) !important;
+}
+
+/* ===== PÁGINA DE DETALHES DO HOTEL ===== */
+body.dark-mode .hotel-details-container {
+    background: transparent !important;
+}
+
+body.dark-mode .main-content {
+    background: #1e293b !important;
+    border: 1px solid #475569 !important;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* GALERIA */
+body.dark-mode .main-image {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3) !important;
+}
+
+body.dark-mode .image-badge {
+    background: rgba(30, 41, 59, 0.95) !important;
+    color: #f1f5f9 !important;
+    backdrop-filter: blur(10px) !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
+}
+
+body.dark-mode .thumbnail {
+    border: 3px solid #475569 !important;
+}
+
+body.dark-mode .thumbnail:hover,
+body.dark-mode .thumbnail.active {
+    border-color: #3b82f6 !important;
+    opacity: 1 !important;
+}
+
+/* INFORMAÇÕES DO HOTEL */
+body.dark-mode .hotel-basic-info {
+    border-bottom: 1px solid #475569 !important;
+}
+
+body.dark-mode .hotel-title h1 {
+    color: #f1f5f9 !important;
+}
+
+body.dark-mode .location {
+    color: #94a3b8 !important;
+}
+
+body.dark-mode .btn-share,
+body.dark-mode .btn-favorite {
+    background: #334155 !important;
+    border: 1px solid #475569 !important;
+    color: #cbd5e1 !important;
+}
+
+body.dark-mode .btn-share:hover,
+body.dark-mode .btn-favorite:hover {
+    background: #475569 !important;
+    border-color: #60a5fa !important;
+    color: #60a5fa !important;
+}
+
+/* COMODIDADES */
+body.dark-mode .amenities-section h2,
+body.dark-mode .description-section h2,
+body.dark-mode .rooms-section h2,
+body.dark-mode .reviews-section h2 {
+    color: #f1f5f9 !important;
+    border-bottom: 2px solid #475569 !important;
+}
+
+body.dark-mode .amenity-item {
+    background: #334155 !important;
+    border: 1px solid #475569 !important;
+}
+
+body.dark-mode .amenity-item:hover {
+    background: #475569 !important;
+    border-color: #3b82f6 !important;
+}
+
+body.dark-mode .amenity-info strong {
+    color: #f1f5f9 !important;
+}
+
+body.dark-mode .amenity-info span {
+    color: #94a3b8 !important;
+}
+
+/* DESCRIÇÃO */
+body.dark-mode .description-content p {
+    color: #cbd5e1 !important;
+}
+
+body.dark-mode .highlight-item {
+    background: #334155 !important;
+    border-left: 4px solid #3b82f6 !important;
+}
+
+body.dark-mode .highlight-item strong {
+    color: #f1f5f9 !important;
+}
+
+body.dark-mode .highlight-item span {
+    color: #94a3b8 !important;
+}
+
+/* QUARTOS */
+body.dark-mode .room-card {
+    background: #334155 !important;
+    border: 1px solid #475569 !important;
+}
+
+body.dark-mode .room-card:hover {
+    background: #475569 !important;
+    border-color: #3b82f6 !important;
+}
+
+body.dark-mode .room-info h3 {
+    color: #f1f5f9 !important;
+}
+
+body.dark-mode .room-size {
+    color: #94a3b8 !important;
+}
+
+body.dark-mode .room-features span {
+    color: #cbd5e1 !important;
+}
+
+body.dark-mode .room-price .price {
+    color: #60a5fa !important;
+}
+
+body.dark-mode .room-price .period {
+    color: #94a3b8 !important;
+}
+
+body.dark-mode .room-badge {
+    background: #3b82f6 !important;
+    color: white !important;
+}
+
+body.dark-mode .room-badge.premium {
+    background: #f59e0b !important;
+}
+
+body.dark-mode .room-badge.vip {
+    background: #8b5cf6 !important;
+}
+
+/* AVALIAÇÕES */
+body.dark-mode .overall-rating {
+    background: #334155 !important;
+}
+
+body.dark-mode .rating-score {
+    color: #f1f5f9 !important;
+}
+
+body.dark-mode .review-count {
+    color: #94a3b8 !important;
+}
+
+body.dark-mode .review-card {
+    background: #334155 !important;
+    border: 1px solid #475569 !important;
+}
+
+body.dark-mode .review-card:hover {
+    background: #475569 !important;
+}
+
+body.dark-mode .reviewer-details strong {
+    color: #f1f5f9 !important;
+}
+
+body.dark-mode .review-date {
+    color: #94a3b8 !important;
+}
+
+body.dark-mode .review-text {
+    color: #cbd5e1 !important;
+}
+
+/* SIDEBAR DE RESERVA */
+body.dark-mode .reservation-card {
+    background: #1e293b !important;
+    border: 1px solid #475569 !important;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3) !important;
+}
+
+body.dark-mode .reservation-header {
+    border-bottom: 1px solid #475569 !important;
+}
+
+body.dark-mode .reservation-header h3 {
+    color: #f1f5f9 !important;
+}
+
+body.dark-mode .price-main {
+    color: #60a5fa !important;
+}
+
+body.dark-mode .price-label {
+    color: #94a3b8 !important;
+}
+
+body.dark-mode .tax-info {
+    color: #64748b !important;
+}
+
+body.dark-mode .feature-item {
+    color: #cbd5e1 !important;
+}
+
+body.dark-mode .btn-reserve {
+    background: linear-gradient(135deg, #3b82f6, #2563eb) !important;
+    color: white !important;
+}
+
+body.dark-mode .btn-reserve:hover {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8) !important;
+}
+
+body.dark-mode .quick-info {
+    color: #94a3b8 !important;
+}
+
+body.dark-mode .quick-info a {
+    color: #60a5fa !important;
+}
+
+/* ===== PÁGINA DE RESERVA (DADOS RESERVA) ===== */
+body.dark-mode .reservation-container {
+    background: transparent !important;
+}
+
+body.dark-mode .reservation-main {
+    background: #1e293b !important;
+    border: 1px solid #475569 !important;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3) !important;
+}
+
+body.dark-mode .reservation-header {
+    border-bottom: 1px solid #475569 !important;
+}
+
+body.dark-mode .reservation-header h1 {
+    color: #f1f5f9 !important;
+}
+
+body.dark-mode .reservation-header p {
+    color: #94a3b8 !important;
+}
+
+/* FORM SECTIONS */
+body.dark-mode .form-section {
+    border-bottom: 1px solid #475569 !important;
+}
+
+body.dark-mode .form-section h2 {
+    color: #f1f5f9 !important;
+}
+
+/* HOTEL SUMMARY */
+body.dark-mode .hotel-summary {
+    background: #334155 !important;
+    border: 1px solid #475569 !important;
+}
+
+body.dark-mode .hotel-details h3 {
+    color: #f1f5f9 !important;
+}
+
+body.dark-mode .hotel-info .location {
+    color: #94a3b8 !important;
+}
+
+/* ROOM SELECTION */
+body.dark-mode .room-option {
+    background: #334155 !important;
+    border: 2px solid #475569 !important;
+}
+
+body.dark-mode .room-option:hover {
+    border-color: #3b82f6 !important;
+    background: #475569 !important;
+}
+
+body.dark-mode .room-option.selected {
+    background: #1e40af !important;
+    border-color: #3b82f6 !important;
+}
+
+body.dark-mode .room-info h4 {
+    color: #f1f5f9 !important;
+}
+
+body.dark-mode .room-info p {
+    color: #94a3b8 !important;
+}
+
+body.dark-mode .room-features span {
+    color: #cbd5e1 !important;
+}
+
+/* FORM INPUTS */
+body.dark-mode .form-group input,
+body.dark-mode .form-group select,
+body.dark-mode .form-group textarea {
+    background: #334155 !important;
+    border: 1px solid #475569 !important;
+    color: #f1f5f9 !important;
+}
+
+body.dark-mode .form-group input::placeholder,
+body.dark-mode .form-group textarea::placeholder {
+    color: #94a3b8 !important;
+}
+
+body.dark-mode .form-group input:focus,
+body.dark-mode .form-group select:focus,
+body.dark-mode .form-group textarea:focus {
+    border-color: #3b82f6 !important;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1) !important;
+}
+
+body.dark-mode .form-group label {
+    color: #cbd5e1 !important;
+}
+
+/* SERVICE OPTIONS */
+body.dark-mode .service-option label {
+    background: #334155 !important;
+    border: 2px solid #475569 !important;
+}
+
+body.dark-mode .service-option input[type="checkbox"]:checked + label {
+    background: #1e40af !important;
+    border-color: #3b82f6 !important;
+}
+
+body.dark-mode .service-option label:hover {
+    border-color: #3b82f6 !important;
+    background: #475569 !important;
+}
+
+body.dark-mode .service-info strong {
+    color: #f1f5f9 !important;
+}
+
+body.dark-mode .service-info span {
+    color: #94a3b8 !important;
+}
+
+/* TERMS AGREEMENT */
+body.dark-mode .terms-agreement label {
+    color: #cbd5e1 !important;
+}
+
+body.dark-mode .terms-agreement a {
+    color: #60a5fa !important;
+}
+
+/* BUTTON */
+body.dark-mode .btn-complete-reservation {
+    background: linear-gradient(135deg, #10b981, #34d399) !important;
+    color: white !important;
+    box-shadow: 0 8px 20px rgba(16, 185, 129, 0.3) !important;
+}
+
+body.dark-mode .btn-complete-reservation:hover {
+    background: linear-gradient(135deg, #34d399, #10b981) !important;
+    box-shadow: 0 12px 25px rgba(16, 185, 129, 0.4) !important;
+}
+
+/* RESERVATION SUMMARY */
+body.dark-mode .reservation-summary {
+    background: transparent !important;
+}
+
+body.dark-mode .summary-card {
+    background: #1e293b !important;
+    border: 1px solid #475569 !important;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3) !important;
+}
+
+body.dark-mode .summary-card h3 {
+    color: #f1f5f9 !important;
+    border-bottom: 1px solid #475569 !important;
+}
+
+body.dark-mode .summary-item {
+    border-bottom: 1px solid #475569 !important;
+    color: #cbd5e1 !important;
+}
+
+body.dark-mode .summary-total {
+    border-top: 2px solid #475569 !important;
+}
+
+body.dark-mode .total-item strong {
+    color: #f1f5f9 !important;
+}
+
+body.dark-mode .summary-features {
+    background: #334155 !important;
+    border: 1px solid #475569 !important;
+}
+
+body.dark-mode .feature-item {
+    color: #cbd5e1 !important;
+}
+
+body.dark-mode .summary-help {
+    border-top: 1px solid #475569 !important;
+}
+
+body.dark-mode .summary-help p {
+    color: #94a3b8 !important;
+}
+
+body.dark-mode .summary-help a {
+    color: #60a5fa !important;
+}
+
+/* ===== PÁGINA RESERVA CONCLUÍDA ===== */
+body.dark-mode .success-container {
+    background: transparent !important;
+}
+
+body.dark-mode .success-content {
+    background: #1e293b !important;
+    border: 1px solid #475569 !important;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4) !important;
+}
+
+body.dark-mode .success-message h1 {
+    background: linear-gradient(135deg, #60a5fa, #93c5fd) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+}
+
+body.dark-mode .success-message p {
+    color: #94a3b8 !important;
+}
+
+/* DETAIL CARD */
+body.dark-mode .detail-card {
+    background: #334155 !important;
+    border: 1px solid #475569 !important;
+}
+
+body.dark-mode .detail-card h3 {
+    color: #f1f5f9 !important;
+    border-bottom: 2px solid #475569 !important;
+}
+
+body.dark-mode .detail-item {
+    border-bottom: 1px solid #475569 !important;
+}
+
+body.dark-mode .detail-label {
+    color: #94a3b8 !important;
+}
+
+body.dark-mode .detail-value {
+    color: #f1f5f9 !important;
+}
+
+body.dark-mode .detail-item.total {
+    border-top: 2px solid #475569 !important;
+}
+
+body.dark-mode .detail-item.total .detail-value {
+    color: #60a5fa !important;
+}
+
+/* INFO CARDS */
+body.dark-mode .info-card {
+    background: #334155 !important;
+    border-left: 4px solid #3b82f6 !important;
+}
+
+body.dark-mode .info-card h4 {
+    color: #f1f5f9 !important;
+}
+
+body.dark-mode .info-card p {
+    color: #94a3b8 !important;
+}
+
+body.dark-mode .info-card a {
+    color: #60a5fa !important;
+}
+
+/* BUTTONS */
+body.dark-mode .btn-primary {
+    background: linear-gradient(135deg, #3b82f6, #60a5fa) !important;
+    color: white !important;
+}
+
+body.dark-mode .btn-primary:hover {
+    background: linear-gradient(135deg, #2563eb, #3b82f6) !important;
+}
+
+body.dark-mode .btn-secondary {
+    background: #334155 !important;
+    color: #cbd5e1 !important;
+    border: 2px solid #475569 !important;
+}
+
+body.dark-mode .btn-secondary:hover {
+    background: #475569 !important;
+    border-color: #3b82f6 !important;
+    color: #3b82f6 !important;
+}
+
+/* ===== FOOTER - TODAS AS PÁGINAS ===== */
+body.dark-mode .footer {
+    background: #020617 !important;
+    border-top: 1px solid #334155 !important;
+}
+
+body.dark-mode .footer-section h3 {
+    background: linear-gradient(135deg, #60a5fa, #93c5fd) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+}
+
+body.dark-mode .footer-section h4 {
+    color: #e2e8ff !important;
+}
+
+body.dark-mode .footer-section p {
+    color: #94a3b8 !important;
+}
+
+body.dark-mode .footer-section a {
+    color: #cbd5e1 !important;
+}
+
+body.dark-mode .footer-section a:hover {
+    color: #60a5fa !important;
+}
+
+body.dark-mode .footer-bottom {
+    border-top: 1px solid #374151 !important;
+    color: #64748b !important;
+}
+
+/* ===== BOTÃO DO TEMA ===== */
+.theme-toggle-global {
+    background: linear-gradient(135deg, #334155, #475569) !important;
+    border: none !important;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 12px;
+    color: #fbbf24 !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.theme-toggle-global:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(251, 191, 36, 0.4);
+}
+
+.theme-toggle-global::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(251, 191, 36, 0.2) 0%, transparent 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.theme-toggle-global:hover::before {
+    opacity: 1;
+}
+
+/* ===== TOAST ELEGANTE ===== */
+.theme-toast {
+    position: fixed;
+    top: 90px;
+    right: 24px;
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: white;
+    padding: 14px 20px;
+    border-radius: 12px;
+    z-index: 10000;
+    font-size: 0.9rem;
+    font-weight: 500;
+    box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+    animation: slideInRight 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(10px);
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%) scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0) scale(1);
+        opacity: 1;
+    }
+}
+
+/* ===== TRANSITIONS SUAVES ===== */
+body.dark-mode * {
+    transition: background-color 0.3s ease, 
+                color 0.3s ease, 
+                border-color 0.3s ease,
+                box-shadow 0.3s ease,
+                transform 0.3s ease !important;
+}
+
+/* ===== CORREÇÃO PARA IMAGENS ===== */
+body.dark-mode img:not(.logo):not(.menu-icon) {
+    filter: brightness(0.9) !important;
+}
+
+/* ===== SCROLLBAR PERSONALIZADA ===== */
+body.dark-mode::-webkit-scrollbar {
+    width: 8px;
+}
+
+body.dark-mode::-webkit-scrollbar-track {
+    background: #1e293b;
+}
+
+body.dark-mode::-webkit-scrollbar-thumb {
+    background: #475569;
+    border-radius: 4px;
+}
+
+body.dark-mode::-webkit-scrollbar-thumb:hover {
+    background: #64748b;
+}
+
+/* ===== TOAST DO TEMA ===== */
+.theme-toast {
+    position: fixed;
+    top: 90px;
+    right: 24px;
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: white;
+    padding: 14px 20px;
+    border-radius: 12px;
+    z-index: 10000;
+    font-size: 0.9rem;
+    font-weight: 500;
+    box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+    animation: slideInRight 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(10px);
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%) scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0) scale(1);
+        opacity: 1;
+    }
+}
+/* ===== CONFIGURAÇÕES - MODO ESCURO ===== */
+body.dark-mode .settings-container {
+    background: transparent !important;
+}
+
+body.dark-mode .settings-content {
+    background: #1e293b !important;
+    border: 1px solid #475569 !important;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3) !important;
+}
+
+body.dark-mode .settings-header {
+    border-bottom: 2px solid #475569 !important;
+}
+
+body.dark-mode .settings-header h1 {
+    background: linear-gradient(135deg, #60a5fa, #93c5fd) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+}
+
+body.dark-mode .settings-header p {
+    color: #94a3b8 !important;
+}
+
+/* SECTIONS */
+body.dark-mode .settings-section {
+    background: #334155 !important;
+    border: 1px solid #475569 !important;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2) !important;
+}
+
+body.dark-mode .settings-section:hover {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3) !important;
+    border-color: #3b82f6 !important;
+}
+
+body.dark-mode .section-header {
+    border-bottom: 1px solid #475569 !important;
+}
+
+body.dark-mode .section-header h2 {
+    color: #f1f5f9 !important;
+}
+
+body.dark-mode .section-header p {
+    color: #94a3b8 !important;
+}
+
+/* SETTING ITEMS */
+body.dark-mode .setting-item {
+    background: #1e293b !important;
+    border: 1px solid #475569 !important;
+}
+
+body.dark-mode .setting-item:hover {
+    background: #475569 !important;
+    border-color: #3b82f6 !important;
+}
+
+body.dark-mode .setting-item.clickable:hover {
+    background: #475569 !important;
+}
+
+body.dark-mode .setting-label {
+    color: #f1f5f9 !important;
+}
+
+body.dark-mode .setting-description {
+    color: #94a3b8 !important;
+}
+
+body.dark-mode .setting-arrow {
+    color: #64748b !important;
+}
+
+body.dark-mode .setting-item.clickable:hover .setting-arrow {
+    color: #60a5fa !important;
+}
+
+/* TOGGLE SWITCH */
+body.dark-mode .slider {
+    background: #475569 !important;
+}
+
+body.dark-mode input:checked + .slider {
+    background: #3b82f6 !important;
+}
+
+/* SELECT */
+body.dark-mode .setting-select {
+    background: #1e293b !important;
+    border: 1px solid #475569 !important;
+    color: #f1f5f9 !important;
+}
+
+body.dark-mode .setting-select:focus {
+    border-color: #3b82f6 !important;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1) !important;
+}
+
+/* ACTION BUTTONS */
+body.dark-mode .action-btn {
+    background: #1e293b !important;
+    border: 1px solid #475569 !important;
+    color: #cbd5e1 !important;
+}
+
+body.dark-mode .action-btn:hover {
+    background: #475569 !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3) !important;
+}
+
+body.dark-mode .action-btn.secondary:hover {
+    border-color: #3b82f6 !important;
+    color: #60a5fa !important;
+}
+
+body.dark-mode .action-btn.danger {
+    background: rgba(239, 68, 68, 0.15) !important;
+    border-color: rgba(239, 68, 68, 0.4) !important;
+    color: #f87171 !important;
+}
+
+body.dark-mode .action-btn.danger:hover {
+    background: rgba(239, 68, 68, 0.25) !important;
+    border-color: #ef4444 !important;
+}
+
+/* MAIN BUTTONS */
+body.dark-mode .btn-primary {
+    background: linear-gradient(135deg, #3b82f6, #2563eb) !important;
+    color: white !important;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3) !important;
+}
+
+body.dark-mode .btn-primary:hover {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8) !important;
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4) !important;
+}
+
+body.dark-mode .btn-secondary {
+    background: #334155 !important;
+    border: 2px solid #475569 !important;
+    color: #cbd5e1 !important;
+}
+
+body.dark-mode .btn-secondary:hover {
+    background: #475569 !important;
+    border-color: #3b82f6 !important;
+    color: #60a5fa !important;
+}
+
+body.dark-mode .action-buttons {
+    border-top: 1px solid #475569 !important;
+}

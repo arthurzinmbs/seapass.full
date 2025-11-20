@@ -1,63 +1,67 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 import psycopg2
+from psycopg2.extras import RealDictCursor
+from datetime import datetime
 
-# Conexão com o banco
+app = Flask(__name__)
+CORS(app)
+
 try:
     conn = psycopg2.connect(
-        host="localhost",
-        database="seapass",
+        dbname="seapass",
         user="postgres",
-        password="acacio1"
+        password="sua_senha",
+        host="127.0.0.1",
+        port="5432"
     )
-    print("Conexão com o banco realizada com sucesso!")
+    cursor = conn.cursor(cursor_factory=RealDictCursor)
+    print("✅ Banco de dados conectado com sucesso!")
 except Exception as e:
-    print("Erro ao conectar ao banco:", e)
+    print("❌ Erro ao conectar no banco de dados:", e)
+    exit(1)
 
-# Criação do Flask app
-app = Flask(__name__)
-CORS(app)  # Permite requisições de qualquer origem
-
-# Teste de saúde da API
-@app.route("/api/health", methods=["GET"])
-def health():
-    return jsonify({"status": "API funcionando!"})
-
-# Cadastro de usuário
 @app.route("/api/usuario", methods=["POST"])
-def cadastro():
+def create_usuario():
+    data = request.json
     try:
-        data = request.get_json(force=True)
-
-        nome = data.get("nome")
-        email = data.get("email")
-        telefone = data.get("telefone")
-        senha = data.get("senha")
-
-        # Verificação de campos obrigatórios
-        if not nome or not email or not senha:
-            return jsonify({
-                "success": False,
-                "erro": "Campos obrigatórios: nome, email, senha"
-            }), 400
-
-        cursor = conn.cursor()
-
-        # Inserção na tabela **usuario**
         cursor.execute(
-            "INSERT INTO usuario (nome, email, telefone, senha) VALUES (%s, %s, %s, %s)",
-            (nome, email, telefone, senha)
+            "INSERT INTO usuario (nome, email, telefone, senha) VALUES (%s, %s, %s, %s) RETURNING id",
+            (data["nome"], data["email"], data.get("telefone", ""), data["senha"])
         )
-
+        user_id = cursor.fetchone()["id"]
         conn.commit()
-        cursor.close()
-
-        return jsonify({"success": True, "message": "Cadastro realizado com sucesso!"})
-
+        return jsonify({"success": True, "id": user_id})
     except Exception as e:
-        print("Erro no cadastro:", str(e))
-        return jsonify({"success": False, "erro": str(e)})
+        conn.rollback()
+        return jsonify({"success": False, "erro": str(e)}), 400
 
-# Rodar o servidor
+@app.route("/api/reserva", methods=["POST"])
+def create_reserva():
+    data = request.json
+    try:
+        cursor.execute(
+            "INSERT INTO reserva (nome_completo, email, telefone, cpf, destino, data_reserva, status) VALUES (%s, %s, %s, %s, %s, %s, %s) RETURNING id",
+            (
+                data["nome_completo"],
+                data["email"],
+                data["telefone"],
+                data["cpf"],
+                data.get("destino", ""),
+                datetime.now(),
+                "Pendente"
+            )
+        )
+        reserva_id = cursor.fetchone()["id"]
+        conn.commit()
+        return jsonify({"success": True, "id": reserva_id})
+    except Exception as e:
+        conn.rollback()
+        return jsonify({"success": False, "erro": str(e)}), 400
+
+@app.route("/")
+def home():
+    return jsonify({"mensagem": "Backend SeaPass conectado!"})
+
 if __name__ == "__main__":
     app.run(debug=True, port=4000)

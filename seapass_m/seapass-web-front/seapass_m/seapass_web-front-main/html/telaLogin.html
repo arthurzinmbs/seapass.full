@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SeaPass - Login</title>
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/global-dark.css">
+
+</head>
+<body>
+    <div class="container-wrapper">
+        <!-- Seção Esquerda - Formulário -->
+        <div class="container">
+            <div class="logo-container">
+                <h1 class="logo">SeaPass</h1>
+            </div>
+            <h2>Fazer login</h2>
+
+            <form id="formLogin">
+                <div class="input-group">
+                    <input type="email" id="email" placeholder="E-mail" required>
+                    <div class="error-message" id="email-error">Por favor, insira um e-mail válido</div>
+                </div>
+
+                <div class="senha-container">
+                    <input type="password" id="senha" placeholder="Senha" required>
+                    <span class="toggleSenha" data-target="senha">👁️</span>
+                </div>
+                <div class="error-message" id="senha-error">Por favor, insira sua senha</div>
+
+                <div class="lembrar-esqueci">
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="lembrar">
+                        <span class="checkmark"></span>
+                        Lembrar-me
+                    </label>
+                    <a href="#" class="esqueci-senha">Esqueci a senha</a>
+                </div>
+
+                <button type="submit" class="btn-login">Entrar</button>
+
+                <div class="divider">
+                    <span>ou entre com</span>
+                </div>
+
+                <div class="social-login">
+                    <button type="button" class="social-btn facebook has-image">
+                        <span class="social-icon facebook"></span>
+                        <span class="social-text">Facebook</span>
+                    </button>
+                    <button type="button" class="social-btn google has-image">
+                        <span class="social-icon google"></span>
+                        <span class="social-text">Google</span>
+                    </button>
+                    <button type="button" class="social-btn apple has-image">
+                        <span class="social-icon apple"></span>
+                        <span class="social-text">Apple</span>
+                    </button>
+                </div>
+            </form>
+
+            <div class="success-message" id="success-message">
+                Login realizado com sucesso!
+            </div>
+
+            <p class="cadastro-link">Não tem uma conta? <a href="Index.html">Cadastre-se</a></p>
+        </div>
+
+        <!-- Seção Direita - Hero Content -->
+        <div class="hero-section">
+            <div class="floating-shapes">
+                <div class="shape"></div>
+                <div class="shape"></div>
+                <div class="shape"></div>
+            </div>
+            
+            <div class="hero-content">
+                <h1 class="hero-title">Bem-vindo de volta</h1>
+                <p class="hero-subtitle">
+                    Continue sua jornada de experiências hoteleiras excepcionais. 
+                    Acesse sua conta e descubra novas oportunidades.
+                </p>
+                
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">⚡</div>
+                        <span>Acesso Rápido</span>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🎁</div>
+                        <span>Ofertas Exclusivas</span>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">📱</div>
+                        <span>Multiplataforma</span>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🌟</div>
+                        <span>Experiência Personalizada</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/login.js"></script>
+    <script src="../js/global-dark.js"></script>
+</body>
+</html>

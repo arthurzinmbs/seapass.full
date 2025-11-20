@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Configurações | SeaPass</title>
+  <link rel="stylesheet" href="../css/configuracoes.css">
+  <link rel="stylesheet" href="../css/global-dark.css">
+</head>
+
+<body class="settings-page">
+  
+  <!-- Header -->
+  <header class="topbar">
+    <div class="header-content">
+      <a href="../html/telainicial.html" class="back-button" id="backButton">← Voltar</a>
+      <div class="logo-container">
+        <a href="../html/telainicial.html" style="display: flex; align-items: center; gap: 12px; text-decoration: none;">
+          <img src="../images/logo_seaapass.PNG" alt="Logo SeaPass" class="logo">
+          <span class="logo-text">SeaPass</span>
+        </a>
+      </div>
+
+      <!-- Menu Hamburguer -->
+      <div class="menu-hamburguer">
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburguer-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        
+        <nav class="menu">
+          <a href="../html/telainicial.html" class="menu-item">
+            <span class="menu-icon">🏠</span>
+            Início
+          </a>
+          <a href="hoteis.html" class="menu-item">
+            <span class="menu-icon">🏨</span>
+            Hotéis
+          </a>
+          <a href="reservas.html" class="menu-item">
+            <span class="menu-icon">📅</span>
+            Reservas
+          </a>
+          <a href="conta.html" class="menu-item">
+            <span class="menu-icon">👤</span>
+            Minha Conta
+          </a>
+          <a href="configuracoes.html" class="menu-item active">
+            <span class="menu-icon">⚙️</span>
+            Configurações
+          </a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main class="settings-container">
+    <div class="settings-content">
+      
+      <!-- Cabeçalho -->
+      <div class="settings-header">
+        <h1>Configurações</h1>
+        <p>Personalize sua experiência no SeaPass</p>
+      </div>
+
+      <!-- Grid de Configurações -->
+      <div class="settings-grid">
+        
+        <!-- Aparência -->
+        <section class="settings-section">
+          <div class="section-header">
+            <h2>🎨 Aparência</h2>
+            <p>Personalize a aparência do aplicativo</p>
+          </div>
+          
+          <div class="settings-options">
+            <div class="setting-item">
+              <div class="setting-info">
+                <span class="setting-label">Modo Escuro</span>
+                <span class="setting-description">Ativar tema escuro para melhor experiência noturna</span>
+              </div>
+              <label class="toggle-switch">
+                <input type="checkbox" id="darkModeToggle">
+                <span class="slider"></span>
+              </label>
+            </div>
+
+            <div class="setting-item">
+              <div class="setting-info">
+                <span class="setting-label">Tamanho da Fonte</span>
+                <span class="setting-description">Ajuste o tamanho do texto para melhor legibilidade</span>
+              </div>
+              <select class="setting-select" id="fontSize">
+                <option value="small">Pequeno</option>
+                <option value="medium" selected>Médio</option>
+                <option value="large">Grande</option>
+                <option value="xlarge">Extra Grande</option>
+              </select>
+            </div>
+
+            <div class="setting-item">
+              <div class="setting-info">
+                <span class="setting-label">Animations</span>
+                <span class="setting-description">Controlar animações e transições</span>
+              </div>
+              <label class="toggle-switch">
+                <input type="checkbox" id="animationsToggle" checked>
+                <span class="slider"></span>
+              </label>
+            </div>
+          </div>
+        </section>
+
+        <!-- Notificações -->
+        <section class="settings-section">
+          <div class="section-header">
+            <h2>🔔 Notificações</h2>
+            <p>Controle suas notificações e alertas</p>
+          </div>
+          
+          <div class="settings-options">
+            <div class="setting-item">
+              <div class="setting-info">
+                <span class="setting-label">Notificações Push</span>
+                <span class="setting-description">Receber notificações no dispositivo</span>
+              </div>
+              <label class="toggle-switch">
+                <input type="checkbox" id="pushNotifications" checked>
+                <span class="slider"></span>
+              </label>
+            </div>
+
+            <div class="setting-item">
+              <div class="setting-info">
+                <span class="setting-label">Alertas de Reserva</span>
+                <span class="setting-description">Notificações sobre status de reservas</span>
+              </div>
+              <label class="toggle-switch">
+                <input type="checkbox" id="reservationAlerts" checked>
+                <span class="slider"></span>
+              </label>
+            </div>
+
+            <div class="setting-item">
+              <div class="setting-info">
+                <span class="setting-label">Ofertas Especiais</span>
+                <span class="setting-description">Promoções e ofertas exclusivas</span>
+              </div>
+              <label class="toggle-switch">
+                <input type="checkbox" id="specialOffers">
+                <span class="slider"></span>
+              </label>
+            </div>
+
+            <div class="setting-item">
+              <div class="setting-info">
+                <span class="setting-label">Notificações por E-mail</span>
+                <span class="setting-description">Receber atualizações por e-mail</span>
+              </div>
+              <label class="toggle-switch">
+                <input type="checkbox" id="emailNotifications" checked>
+                <span class="slider"></span>
+              </label>
+            </div>
+          </div>
+        </section>
+
+        <!-- Privacidade e Segurança -->
+        <section class="settings-section">
+          <div class="section-header">
+            <h2>🔒 Privacidade & Segurança</h2>
+            <p>Controle sua privacidade e segurança</p>
+          </div>
+          
+          <div class="settings-options">
+            <div class="setting-item">
+              <div class="setting-info">
+                <span class="setting-label">Login com Biometria</span>
+                <span class="setting-description">Usar impressão digital ou reconhecimento facial</span>
+              </div>
+              <label class="toggle-switch">
+                <input type="checkbox" id="biometricLogin">
+                <span class="slider"></span>
+              </label>
+            </div>
+
+            <div class="setting-item">
+              <div class="setting-info">
+                <span class="setting-label">Autenticação em 2 Etapas</span>
+                <span class="setting-description">Segurança adicional para sua conta</span>
+              </div>
+              <label class="toggle-switch">
+                <input type="checkbox" id="twoFactorAuth">
+                <span class="slider"></span>
+              </label>
+            </div>
+
+            <div class="setting-item clickable" onclick="showDataPreferences()">
+              <div class="setting-info">
+                <span class="setting-label">Preferências de Dados</span>
+                <span class="setting-description">Gerenciar seus dados pessoais</span>
+              </div>
+              <span class="setting-arrow">›</span>
+            </div>
+
+            <div class="setting-item clickable" onclick="showPrivacyPolicy()">
+              <div class="setting-info">
+                <span class="setting-label">Política de Privacidade</span>
+                <span class="setting-description">Como protegemos seus dados</span>
+              </div>
+              <span class="setting-arrow">›</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Preferências de Viagem -->
+        <section class="settings-section">
+          <div class="section-header">
+            <h2>✈️ Preferências de Viagem</h2>
+            <p>Personalize suas experiências de viagem</p>
+          </div>
+          
+          <div class="settings-options">
+            <div class="setting-item">
+              <div class="setting-info">
+                <span class="setting-label">Idioma Preferido</span>
+                <span class="setting-description">Idioma para conteúdo e suporte</span>
+              </div>
+              <select class="setting-select" id="preferredLanguage">
+                <option value="pt" selected>Português (BR)</option>
+                <option value="en">English</option>
+                <option value="es">Español</option>
+                <option value="fr">Français</option>
+              </select>
+            </div>
+
+            <div class="setting-item">
+              <div class="setting-info">
+                <span class="setting-label">Moeda Padrão</span>
+                <span class="setting-description">Moeda para exibição de preços</span>
+              </div>
+              <select class="setting-select" id="defaultCurrency">
+                <option value="BRL" selected>Real Brasileiro (R$)</option>
+                <option value="USD">Dólar Americano ($)</option>
+                <option value="EUR">Euro (€)</option>
+                <option value="GBP">Libra Esterlina (£)</option>
+              </select>
+            </div>
+
+            <div class="setting-item">
+              <div class="setting-info">
+                <span class="setting-label">Preferências de Quarto</span>
+                <span class="setting-description">Suas preferências de hospedagem</span>
+              </div>
+              <select class="setting-select" id="roomPreferences">
+                <option value="any" selected>Qualquer quarto</option>
+                <option value="non-smoking">Não fumante</option>
+                <option value="high-floor">Andares altos</option>
+                <option value="quiet">Área silenciosa</option>
+              </select>
+            </div>
+          </div>
+        </section>
+
+        <!-- Suporte -->
+        <section class="settings-section">
+          <div class="section-header">
+            <h2>📞 Suporte</h2>
+            <p>Precisa de ajuda? Estamos aqui</p>
+          </div>
+          
+          <div class="settings-options">
+            <div class="setting-item clickable" onclick="contactSupport()">
+              <div class="setting-info">
+                <span class="setting-label">Fale Conosco</span>
+                <span class="setting-description">Entre em contato com nosso suporte</span>
+              </div>
+              <span class="setting-arrow">›</span>
+            </div>
+
+            <div class="setting-item clickable" onclick="showFAQ()">
+              <div class="setting-info">
+                <span class="setting-label">Perguntas Frequentes</span>
+                <span class="setting-description">Encontre respostas rápidas</span>
+              </div>
+              <span class="setting-arrow">›</span>
+            </div>
+
+            <div class="setting-item clickable" onclick="showAbout()">
+              <div class="setting-info">
+                <span class="setting-label">Sobre o App</span>
+                <span class="setting-description">Versão e informações do aplicativo</span>
+              </div>
+              <span class="setting-arrow">›</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Ações Rápidas -->
+        <section class="settings-section">
+          <div class="section-header">
+            <h2>⚡ Ações Rápidas</h2>
+            <p>Ações importantes da sua conta</p>
+          </div>
+          
+          <div class="quick-actions">
+            <button class="action-btn secondary" onclick="clearCache()">
+              <span class="action-icon">🧹</span>
+              Limpar Cache
+            </button>
+            
+            <button class="action-btn secondary" onclick="exportData()">
+              <span class="action-icon">📤</span>
+              Exportar Dados
+            </button>
+            
+            <button class="action-btn danger" onclick="showDeleteAccount()">
+              <span class="action-icon">🗑️</span>
+              Excluir Conta
+            </button>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- Botões de Ação -->
+      <div class="action-buttons">
+        <button class="btn-primary" onclick="saveSettings()">
+          💾 Salvar Configurações
+        </button>
+        <button class="btn-secondary" onclick="resetToDefault()">
+          🔄 Restaurar Padrões
+        </button>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>SeaPass</h3>
+        <p>Encontre as melhores experiências hoteleiras com conforto e sofisticação.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Navegação</h4>
+        <a href="../html/hoteis.html">Hotéis</a>
+        <a href="../html/reservas.html">Reservas</a>
+        <a href="../html/conta.html">Minha Conta</a>
+      </div>
+      <div class="footer-section">
+        <h4>Suporte</h4>
+        <a href="#">Ajuda</a>
+        <a href="#">Contato</a>
+        <a href="#">Políticas</a>
+        <a href="#">Desenvolvedores</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 SeaPass. Todos os direitos reservados.</p>
+      <p class="app-version">Versão 2.1.0</p>
+    </div>
+  </footer>
+
+  <script src="../js/global-dark.js"></script>
+  <script src="../js/configuracoes.js"></script>
+</body>
+</html>

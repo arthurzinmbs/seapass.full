@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reserva Concluída | SeaPass</title>
+  <link rel="stylesheet" href="../css/resConcluida.css">
+  <link rel="stylesheet" href="../css/global-dark.css">
+</head>
+
+<body class="success-page">
+  
+  <!-- Header Simples -->
+  <header class="topbar">
+    <div class="header-content">
+      <div class="logo-container">
+        <a href="../html/telainicial.html" style="display: flex; align-items: center; gap: 12px; text-decoration: none;">
+          <img src="../images/logo_seaapass.PNG" alt="Logo SeaPass" class="logo">
+          <span class="logo-text">SeaPass</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main class="success-container">
+    <div class="success-content">
+      
+      <!-- Ícone de Sucesso -->
+      <div class="success-icon">
+        <div class="checkmark">✓</div>
+      </div>
+
+      <!-- Mensagem Principal -->
+      <div class="success-message">
+        <h1>Reserva Concluída com Sucesso!</h1>
+        <p>Sua estadia no <span id="hotelName">Copacabana Palace</span> foi reservada e confirmada.</p>
+      </div>
+
+      <!-- Detalhes da Reserva -->
+      <div class="reservation-details">
+        <div class="detail-card">
+          <h3>Detalhes da Reserva</h3>
+          
+          <div class="detail-item">
+            <span class="detail-label">Código da Reserva:</span>
+            <span class="detail-value" id="reservationCode">Carregando...</span>
+          </div>
+          
+          <div class="detail-item">
+            <span class="detail-label">Hotel:</span>
+            <span class="detail-value" id="hotelNameDetail">Copacabana Palace</span>
+          </div>
+
+          <div class="detail-item">
+            <span class="detail-label">Acomodação:</span>
+            <span class="detail-value" id="roomType">Quarto Deluxe</span>
+          </div>
+          
+          <div class="detail-item">
+            <span class="detail-label">Check-in:</span>
+            <span class="detail-value" id="checkinDate">Carregando...</span>
+          </div>
+          
+          <div class="detail-item">
+            <span class="detail-label">Check-out:</span>
+            <span class="detail-value" id="checkoutDate">Carregando...</span>
+          </div>
+
+          <div class="detail-item">
+            <span class="detail-label">Noites:</span>
+            <span class="detail-value" id="nightsCount">0</span>
+          </div>
+          
+          <div class="detail-item">
+            <span class="detail-label">Hóspedes:</span>
+            <span class="detail-value" id="guestsInfo">Carregando...</span>
+          </div>
+
+          <div class="detail-item">
+            <span class="detail-label">Hóspede Principal:</span>
+            <span class="detail-value" id="guestName">Carregando...</span>
+          </div>
+
+          <div class="detail-item">
+            <span class="detail-label">E-mail:</span>
+            <span class="detail-value" id="guestEmail">Carregando...</span>
+          </div>
+
+          <div class="detail-item services">
+            <span class="detail-label">Serviços Inclusos:</span>
+            <span class="detail-value" id="servicesList">Nenhum serviço adicional</span>
+          </div>
+          
+          <div class="detail-item total">
+            <span class="detail-label">Total Pago:</span>
+            <span class="detail-value" id="totalAmount">R$ 0,00</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Informações Adicionais -->
+      <div class="additional-info">
+        <div class="info-card">
+          <h4>📧 E-mail de Confirmação</h4>
+          <p>Enviamos todos os detalhes da sua reserva para <strong id="confirmationEmail">seu e-mail</strong>.</p>
+        </div>
+        
+        <div class="info-card">
+          <h4>📱 App SeaPass</h4>
+          <p>Acesse sua reserva através do nosso aplicativo mobile.</p>
+        </div>
+        
+        <div class="info-card">
+          <h4>🏨 Check-in</h4>
+          <p>Check-in a partir das <strong>14:00</strong> • Check-out até <strong>12:00</strong></p>
+        </div>
+
+        <div class="info-card">
+          <h4>❓ Precisa de Ajuda?</h4>
+          <p>Entre em contato: <a href="tel:+551199999999">(11) 9999-9999</a></p>
+        </div>
+      </div>
+
+      <!-- Botão de Ação Principal -->
+      <div class="action-buttons">
+        <button id="btnPrint" class="btn-secondary">
+          🖨️ Imprimir Reserva
+        </button>
+        <a href="../html/telainicial.html" class="btn-primary">
+          🏠 Ir para Página Inicial
+        </a>
+        <a href="../html/reservas.html" class="btn-secondary">
+          📅 Ver Minhas Reservas
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>SeaPass</h3>
+        <p>Encontre as melhores experiências hoteleiras com conforto e sofisticação.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Navegação</h4>
+        <a href="../html/hoteis.html">Hotéis</a>
+        <a href="../html/reservas.html">Reservas</a>
+        <a href="../html/conta.html">Minha Conta</a>
+      </div>
+      <div class="footer-section">
+        <h4>Suporte</h4>
+        <a href="#">Ajuda</a>
+        <a href="#">Contato</a>
+        <a href="#">Políticas</a>
+        <a href="#">Desenvolvedores</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 SeaPass. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="../js/resConcluida.js"></script>
+  <script src="../js/global-dark.js"></script>
+</body>
+</html>

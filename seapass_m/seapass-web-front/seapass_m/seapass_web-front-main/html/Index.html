@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SeaPass - Cadastro</title>
+    <link rel="stylesheet" href="../css/registro.css">
+    <link rel="stylesheet" href="../css/global-dark.css">
+
+</head>
+<body>
+    <div class="container-wrapper">
+        <!-- Seção Esquerda - Formulário -->
+        <div class="container">
+            <div class="logo-container">
+                <h1 class="logo">SeaPass</h1>
+            </div>
+            <h2>Criar sua conta</h2>
+
+            <form id="formRegistro">
+                <div class="form-row">
+                    <div>
+                        <input type="text" id="nome" placeholder="Nome completo" required>
+                        <div class="error-message" id="nome-error"></div>
+                    </div>
+                    <div>
+                        <input type="email" id="email" placeholder="E-mail" required>
+                        <div class="error-message" id="email-error"></div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div>
+                        <input type="tel" id="telefone" placeholder="Telefone" required>
+                        <div class="error-message" id="telefone-error"></div>
+                    </div>
+                    <div>
+                        <input type="date" id="data-nascimento" placeholder="Data de nascimento" required>
+                        <div class="error-message" id="data-nascimento-error"></div>
+                    </div>
+                </div>
+
+                <div class="senha-container">
+                    <input type="password" id="senha" placeholder="Criar senha" required>
+                    <span class="toggleSenha" data-target="senha">👁️</span>
+                </div>
+                <div class="error-message" id="senha-error"></div>
+
+                <div class="senha-container">
+                    <input type="password" id="confirmarSenha" placeholder="Repetir senha" required>
+                    <span class="toggleSenha" data-target="confirmarSenha">👁️</span>
+                </div>
+                <div class="error-message" id="confirmarSenha-error"></div>
+
+                <div class="termos-container">
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="termos" required>
+                        <span class="checkmark"></span>
+                        Concordo com os <a href="#" class="termos-link">Termos de Serviço</a> e <a href="#" class="termos-link">Política de Privacidade</a>
+                    </label>
+                    <div class="error-message" id="termos-error"></div>
+                </div>
+
+                <button type="submit" class="btn-cadastrar" id="btnCadastrar">
+                    <span class="btn-text">Cadastrar</span>
+                    <span class="btn-loading" style="display: none;">
+                        <div class="loading-spinner"></div>
+                        Cadastrando...
+                    </span>
+                </button>
+            </form>
+
+            <div class="success-message" id="success-message">
+                Cadastro realizado com sucesso! Redirecionando...
+            </div>
+
+            <p class="login-link">Já tem uma conta? <a href="../html/telaLogin.html">Faça login</a></p>
+        </div>
+
+        <!-- Seção Direita - Hero Content -->
+        <div class="hero-section">
+            <div class="floating-shapes">
+                <div class="shape"></div>
+                <div class="shape"></div>
+                <div class="shape"></div>
+            </div>
+            
+            <div class="hero-content">
+                <h1 class="hero-title">Bem-vindo ao SeaPass</h1>
+                <p class="hero-subtitle">
+                    Sua jornada para experiências hoteleiras excepcionais começa aqui. 
+                    Cadastre-se e descubra um mundo de conforto e sofisticação.
+                </p>
+                
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">🏨</div>
+                        <span>Reservas Exclusivas</span>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">⭐</div>
+                        <span>Experiência Premium</span>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🔒</div>
+                        <span>Segurança Garantida</span>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🎯</div>
+                        <span>Ofertas Personalizadas</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/registro.js"></script>
+    <script src="../js/global-dark.js"></script>
+</body>
+</html>

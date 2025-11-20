@@ -34,7 +34,7 @@
       <!-- Mensagem Principal -->
       <div class="success-message">
         <h1>Reserva Concluída com Sucesso!</h1>
-        <p>Sua estadia no Copacabana Palace foi reservada e confirmada.</p>
+        <p>Sua estadia no <span id="hotelName">Copacabana Palace</span> foi reservada e confirmada.</p>
       </div>
 
       <!-- Detalhes da Reserva -->
@@ -44,32 +44,57 @@
           
           <div class="detail-item">
             <span class="detail-label">Código da Reserva:</span>
-            <span class="detail-value">SEA<span id="reservationCode"></span></span>
+            <span class="detail-value" id="reservationCode">Carregando...</span>
           </div>
           
           <div class="detail-item">
             <span class="detail-label">Hotel:</span>
-            <span class="detail-value">Copacabana Palace</span>
+            <span class="detail-value" id="hotelNameDetail">Copacabana Palace</span>
+          </div>
+
+          <div class="detail-item">
+            <span class="detail-label">Acomodação:</span>
+            <span class="detail-value" id="roomType">Quarto Deluxe</span>
           </div>
           
           <div class="detail-item">
             <span class="detail-label">Check-in:</span>
-            <span class="detail-value" id="checkinDate"></span>
+            <span class="detail-value" id="checkinDate">Carregando...</span>
           </div>
           
           <div class="detail-item">
             <span class="detail-label">Check-out:</span>
-            <span class="detail-value" id="checkoutDate"></span>
+            <span class="detail-value" id="checkoutDate">Carregando...</span>
+          </div>
+
+          <div class="detail-item">
+            <span class="detail-label">Noites:</span>
+            <span class="detail-value" id="nightsCount">0</span>
           </div>
           
           <div class="detail-item">
             <span class="detail-label">Hóspedes:</span>
-            <span class="detail-value" id="guestsInfo"></span>
+            <span class="detail-value" id="guestsInfo">Carregando...</span>
+          </div>
+
+          <div class="detail-item">
+            <span class="detail-label">Hóspede Principal:</span>
+            <span class="detail-value" id="guestName">Carregando...</span>
+          </div>
+
+          <div class="detail-item">
+            <span class="detail-label">E-mail:</span>
+            <span class="detail-value" id="guestEmail">Carregando...</span>
+          </div>
+
+          <div class="detail-item services">
+            <span class="detail-label">Serviços Inclusos:</span>
+            <span class="detail-value" id="servicesList">Nenhum serviço adicional</span>
           </div>
           
           <div class="detail-item total">
-            <span class="detail-label">Total:</span>
-            <span class="detail-value" id="totalAmount"></span>
+            <span class="detail-label">Total Pago:</span>
+            <span class="detail-value" id="totalAmount">R$ 0,00</span>
           </div>
         </div>
       </div>
@@ -78,7 +103,7 @@
       <div class="additional-info">
         <div class="info-card">
           <h4>📧 E-mail de Confirmação</h4>
-          <p>Enviamos todos os detalhes da sua reserva para o e-mail cadastrado.</p>
+          <p>Enviamos todos os detalhes da sua reserva para <strong id="confirmationEmail">seu e-mail</strong>.</p>
         </div>
         
         <div class="info-card">
@@ -87,6 +112,11 @@
         </div>
         
         <div class="info-card">
+          <h4>🏨 Check-in</h4>
+          <p>Check-in a partir das <strong>14:00</strong> • Check-out até <strong>12:00</strong></p>
+        </div>
+
+        <div class="info-card">
           <h4>❓ Precisa de Ajuda?</h4>
           <p>Entre em contato: <a href="tel:+551199999999">(11) 9999-9999</a></p>
         </div>
@@ -94,6 +124,9 @@
 
       <!-- Botão de Ação Principal -->
       <div class="action-buttons">
+        <button id="btnPrint" class="btn-secondary">
+          🖨️ Imprimir Reserva
+        </button>
         <a href="../html/telainicial.html" class="btn-primary">
           🏠 Ir para Página Inicial
         </a>

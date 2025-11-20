@@ -93,51 +93,8 @@
           <!-- Tipo de Quarto -->
           <section class="form-section">
             <h2>Tipo de Acomodação</h2>
-            <div class="room-selection">
-              <div class="room-option selected" data-room="deluxe">
-                <div class="room-info">
-                  <h4>Quarto Deluxe</h4>
-                  <p>30m² • Vista parcial do mar</p>
-                  <div class="room-features">
-                    <span>🛏️ 1 cama de casal</span>
-                    <span>🚿 Banheiro de mármore</span>
-                  </div>
-                </div>
-                <div class="room-price">
-                  <span class="price">R$ 890</span>
-                  <span class="period">/noite</span>
-                </div>
-              </div>
-
-              <div class="room-option" data-room="junior">
-                <div class="room-info">
-                  <h4>Suíte Junior</h4>
-                  <p>45m² • Vista para o mar • Varanda</p>
-                  <div class="room-features">
-                    <span>🛏️ 1 cama king size</span>
-                    <span>🚿 Banheiro com hidromassagem</span>
-                  </div>
-                </div>
-                <div class="room-price">
-                  <span class="price">R$ 1.200</span>
-                  <span class="period">/noite</span>
-                </div>
-              </div>
-
-              <div class="room-option" data-room="presidencial">
-                <div class="room-info">
-                  <h4>Suíte Presidencial</h4>
-                  <p>80m² • Vista panorâmica • 2 quartos</p>
-                  <div class="room-features">
-                    <span>🛏️ 2 quartos separados</span>
-                    <span>💆 Área de spa privativa</span>
-                  </div>
-                </div>
-                <div class="room-price">
-                  <span class="price">R$ 2.500</span>
-                  <span class="period">/noite</span>
-                </div>
-              </div>
+            <div class="room-selection" id="roomSelection">
+              <!-- Carregado dinamicamente via API -->
             </div>
           </section>
 
@@ -148,10 +105,12 @@
               <div class="form-group">
                 <label for="checkin">Check-in</label>
                 <input type="date" id="checkin" name="checkin" required>
+                <div class="error-message" id="checkin-error"></div>
               </div>
               <div class="form-group">
                 <label for="checkout">Check-out</label>
                 <input type="date" id="checkout" name="checkout" required>
+                <div class="error-message" id="checkout-error"></div>
               </div>
               <div class="form-group">
                 <label for="adults">Adultos</label>
@@ -172,52 +131,16 @@
                 </select>
               </div>
             </div>
+            <div class="availability-status" id="availabilityStatus">
+              <!-- Status de disponibilidade carregado via API -->
+            </div>
           </section>
 
           <!-- Serviços Adicionais -->
           <section class="form-section">
             <h2>Serviços Adicionais</h2>
-            <div class="additional-services">
-              <div class="service-option">
-                <input type="checkbox" id="breakfast" name="breakfast">
-                <label for="breakfast">
-                  <span class="service-icon">🍳</span>
-                  <div class="service-info">
-                    <strong>Café da Manhã</strong>
-                    <span>Buffet completo - R$ 85/dia</span>
-                  </div>
-                </label>
-              </div>
-              <div class="service-option">
-                <input type="checkbox" id="airport" name="airport">
-                <label for="airport">
-                  <span class="service-icon">🚗</span>
-                  <div class="service-info">
-                    <strong>Transfer Aeroporto</strong>
-                    <span>Ida e volta - R$ 150</span>
-                  </div>
-                </label>
-              </div>
-              <div class="service-option">
-                <input type="checkbox" id="spa" name="spa">
-                <label for="spa">
-                  <span class="service-icon">💆</span>
-                  <div class="service-info">
-                    <strong>Pacote Spa</strong>
-                    <span>2 massagens - R$ 350</span>
-                  </div>
-                </label>
-              </div>
-              <div class="service-option">
-                <input type="checkbox" id="late" name="late">
-                <label for="late">
-                  <span class="service-icon">⏰</span>
-                  <div class="service-info">
-                    <strong>Late Check-out</strong>
-                    <span>Até 16h - R$ 120</span>
-                  </div>
-                </label>
-              </div>
+            <div class="additional-services" id="additionalServices">
+              <!-- Carregado dinamicamente via API -->
             </div>
           </section>
 
@@ -228,18 +151,23 @@
               <div class="form-group">
                 <label for="fullname">Nome Completo</label>
                 <input type="text" id="fullname" name="fullname" placeholder="Seu nome completo" required>
+                <div class="error-message" id="fullname-error"></div>
               </div>
               <div class="form-group">
                 <label for="email">E-mail</label>
                 <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                <div class="error-message" id="email-error"></div>
               </div>
               <div class="form-group">
                 <label for="phone">Telefone</label>
                 <input type="tel" id="phone" name="phone" placeholder="(11) 99999-9999" required>
+                <div class="error-message" id="phone-error"></div>
               </div>
               <div class="form-group">
                 <label for="cpf">CPF</label>
-                <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" required>
+                <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" required maxlength="14">
+                <div class="error-message" id="cpf-error"></div>
+                <div class="field-info" id="cpf-info">Digite apenas números, a formatação é automática</div>
               </div>
             </div>
           </section>
@@ -257,18 +185,27 @@
             <div class="terms-agreement">
               <input type="checkbox" id="terms" name="terms" required>
               <label for="terms">
-                Concordo com os <a href="#">Termos e Condições</a> e 
-                <a href="#">Política de Privacidade</a> da SeaPass
+                Concordo com os <a href="#" class="terms-link">Termos e Condições</a> e 
+                <a href="#" class="terms-link">Política de Privacidade</a> da SeaPass
               </label>
+              <div class="error-message" id="terms-error"></div>
             </div>
           </section>
 
           <!-- Botão de Concluir Reserva -->
           <div class="form-actions">
-            <button type="submit" class="btn-complete-reservation">
-              <span class="btn-icon">✅</span>
-              Concluir Reserva
+            <button type="submit" class="btn-complete-reservation" id="btnCompleteReservation">
+              <span class="btn-text">✅ Concluir Reserva</span>
+              <span class="btn-loading" style="display: none;">
+                <div class="loading-spinner"></div>
+                Processando reserva...
+              </span>
             </button>
+          </div>
+
+          <!-- Mensagem de Sucesso -->
+          <div class="success-message" id="success-message" style="display: none;">
+            Reserva realizada com sucesso! Redirecionando...
           </div>
         </form>
       </div>
@@ -278,29 +215,17 @@
         <div class="summary-card">
           <h3>Resumo da Reserva</h3>
           
-          <div class="summary-details">
-            <div class="summary-item">
-              <span>Quarto Deluxe</span>
-              <span>R$ 890/noite</span>
-            </div>
-            <div class="summary-item">
-              <span>3 noites</span>
-              <span>R$ 2.670</span>
-            </div>
-            <div class="summary-item">
-              <span>Taxas e impostos</span>
-              <span>R$ 267</span>
-            </div>
-            <div class="summary-item">
-              <span>Serviços adicionais</span>
-              <span>R$ 0</span>
+          <div class="summary-details" id="summaryDetails">
+            <div class="summary-loading">
+              <div class="loading-spinner small"></div>
+              Carregando resumo...
             </div>
           </div>
 
           <div class="summary-total">
             <div class="total-item">
               <strong>Total</strong>
-              <strong>R$ 2.937</strong>
+              <strong id="totalAmount">R$ 0,00</strong>
             </div>
           </div>
 
